@@ -198,3 +198,10 @@ function wr() {
     tmux switch-client -t WriteRoom
   fi
 }
+
+# Extra plugins
+# Jump around
+source ~/.zsh/z/z.sh
+# Autocomplete
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+bindkey '^ ' autosuggest-accept

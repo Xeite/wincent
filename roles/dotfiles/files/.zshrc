@@ -138,8 +138,8 @@ setopt autocd               # .. is shortcut for cd .. (etc)
 setopt autoparamslash       # tab completing directory appends a slash
 setopt autopushd            # cd automatically pushes old dir onto dir stack
 setopt clobber              # allow clobbering with >, no need to use >!
-setopt correct              # command auto-correction
-setopt correctall           # argument auto-correction
+#setopt correct              # command auto-correction
+#setopt correctall           # argument auto-correction
 setopt noflowcontrol        # disable start (C-s) and stop (C-q) characters
 setopt nonomatch            # unmatched patterns are left unchanged
 setopt histignorealldups    # filter duplicates from history
@@ -156,7 +156,7 @@ setopt sharehistory         # share history across shells
 # Bindings
 #
 
-bindkey -e # emacs bindings, set to -v for vi bindings
+bindkey -v # emacs bindings, set to -v for vi bindings
 
 autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
@@ -322,3 +322,4 @@ if [ -e /etc/motd ]; then
     tee $HOME/.hushlogin < /etc/motd
   fi
 fi
+

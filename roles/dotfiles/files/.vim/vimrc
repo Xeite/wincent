@@ -2,8 +2,20 @@ if v:progname == 'vi'
   set noloadplugins
 endif
 
-let mapleader="\<Space>"
+let mapleader=","
 let maplocalleader="\\"
+
+" Easy editing of VIMRC
+nnoremap <Leader>v :sp $MYVIMRC<cr>
+nnoremap <Leader>r :source $MYVIMRC<cr>
+
+" Remap ESC
+inoremap jk <ESC>
+inoremap <ESC> <Nop>
+
+" Reamp tag search
+nnoremap <C-y> <C-]>
+nnoremap <C-]> <Nop>
 
 " Extension -> filetype mappings.
 let filetype_m='objc'
@@ -37,6 +49,12 @@ let g:tcommentTextObjectInlineComment=''
 " The default (g<) is a bit awkward to type.
 let g:tcommentMapLeaderUncommentAnyway='gu'
 
+" Use global tags
+set cscopetag
+let g:GtagsCscope_Auto_Load = 1
+let g:GtagsCscope_Auto_Map = 1
+let g:GtagsCscope_Quiet = 1
+
 " Allow for per-machine overrides in ~/.vim/host/hostname and
 " ~/.vim/vimrc.local.
 let s:hostfile = $HOME . '/.vim/host/' . substitute(hostname(), "\\..*", '', '')
@@ -63,9 +81,11 @@ if &loadplugins
   if has('packages')
     packloadall
   else
-    " Use Pathogen for plug-in loading.
-    source $HOME/.vim/pack/bundle/opt/vim-pathogen/autoload/pathogen.vim
-    call pathogen#infect('pack/bundle/start/{}')
+    " Use Vundle for plug-in loading.
+    set rtp+=~/.vim/bundle/Vundle.vim
+    call vundle#begin()
+    call vundle#end()
+    filetype plugin indent on
   endif
 endif
 
