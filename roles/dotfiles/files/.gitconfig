@@ -125,8 +125,8 @@
 	fetchJobs = 4
 
 [user]
-	email = greg@hurrell.net
-	name = Greg Hurrell
+	email = yan.a@kakaocorp.com 
+	name = Yang Youseok
 
 # ignored by Git older than 1.7.10
 [include]

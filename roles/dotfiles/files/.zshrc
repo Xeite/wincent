@@ -323,3 +323,6 @@ if [ -e /etc/motd ]; then
   fi
 fi
 
+export LC_CTYPE="UTF-8"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

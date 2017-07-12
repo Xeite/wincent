@@ -14,6 +14,7 @@ nnoremap <Leader>p :echo expand('%')<CR>
 nnoremap <Leader>pp :let @0=expand('%') <Bar> :Clip<CR> :echo expand('%')<CR>
 
 nnoremap <Leader>q :quit<CR>
+nnoremap <Leader>qq :quit!<CR>
 
 " <Leader>r -- Cycle through relativenumber + number, number (only), and no
 " numbering (mnemonic: relative).
@@ -66,17 +67,17 @@ nnoremap <Leader>g- :Silent Git stash<CR>:e<CR>
 nnoremap <Leader>g+ :Silent Git stash pop<CR>:e<CR>
 
 " Buffer switching
-nnoremap <Leader>x :bn!<CR>      
-nnoremap <Leader>z :bp!<CR>      
+"nnoremap <Leader>x :bn!<CR>      
+"nnoremap <Leader>z :bp!<CR>      
 "nnoremap <Leader>w :bw<CR>       
-nnoremap <Leader>1 :b!1<CR>      
-nnoremap <Leader>2 :b!2<CR>      
-nnoremap <Leader>3 :b!3<CR>      
-nnoremap <Leader>4 :b!4<CR>      
-nnoremap <Leader>5 :b!5<CR>      
-nnoremap <Leader>6 :b!6<CR>      
-nnoremap <Leader>7 :b!7<CR>      
-nnoremap <Leader>8 :b!8<CR>      
-nnoremap <Leader>9 :b!9<CR>      
-nnoremap <Leader>0 :b!0<CR>      
-
+"nnoremap <Leader>1 :b!1<CR>      
+"nnoremap <Leader>2 :b!2<CR>      
+"nnoremap <Leader>3 :b!3<CR>      
+"nnoremap <Leader>4 :b!4<CR>      
+"nnoremap <Leader>5 :b!5<CR>      
+"nnoremap <Leader>6 :b!6<CR>      
+"nnoremap <Leader>7 :b!7<CR>      
+"nnoremap <Leader>8 :b!8<CR>      
+"nnoremap <Leader>9 :b!9<CR>      
+"nnoremap <Leader>0 :b!0<CR>      
+"
